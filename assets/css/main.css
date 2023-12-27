@@ -5,9 +5,9 @@
   --c-blue-300: hsl(224, 23%, 55%);
   --c-blue-800: hsl(223, 47%, 23%);
   --c-white: hsl(0, 0%, 100%);
-
   --f-color: var(--c-blue-800);
   --f-family: "Red Hat Display", sans-serif;
+  --f-line-height: 26px;
 }
 
 * {
@@ -17,29 +17,25 @@
 }
 
 body {
+  background: url(../images/pattern-background-mobile.svg), var(--c-pale-blue);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--f-color);
   position: relative;
   width: 100%;
   min-height: 100vh;
   font-family: var(--f-family);
   font-size: 16px;
-  line-height: 25px;
   font-weight: 500;
+  line-height: var(--f-line-height);
   display: grid;
   place-items: center;
-  color: var(--f-color);
-  background: url(../images/pattern-background-mobile.svg), var(--c-pale-blue);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 img {
   width: 100%;
 }
-
-/* .container * {
-  outline: 1px solid red;
-} */
 
 .container {
   padding: 1.5rem;
@@ -47,7 +43,7 @@ img {
 
 .card {
   width: 100%;
-  max-width: 28.125rem;
+  max-width: 375px;
   border-radius: 1.25rem;
   overflow: hidden;
   background-color: var(--c-white);
@@ -59,9 +55,8 @@ img {
 }
 
 .card-content .card-title {
-  font-size: 1.4rem;
+  font-size: 1.375rem;
   font-weight: 900;
-  line-height: 1;
   margin-bottom: 1.25rem;
 }
 
@@ -114,34 +109,49 @@ img {
 }
 
 .btn {
-  padding: 12px 0;
+  --padding-x: ;
+  --padding-y: ;
+  --bg-color: ;
+  --bg-color-hover: ;
+  --txt-color: ;
+  --text-color-hover: ;
+  --box-shadow: ;
+  padding: var(--padding-y) var(--padding-x);
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  box-shadow: var(--box-shadow);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   border-radius: 12px;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.75;
+  color: var(--txt-color-hover);
 }
 
 .btn-primary {
-  background-color: var(--c-bright-blue);
-  color: white;
-  box-shadow: 0px 10px 15px 5px rgba(56, 41, 224, 0.25);
-}
-
-.btn-primary:hover {
-  opacity: 0.75;
-  transition: all 0.2s ease-in-out;
+  --padding-x: 0;
+  --padding-y: 12px;
+  --bg-color: var(--c-bright-blue);
+  --bg-color-hover: ;
+  --txt-color: var(--c-white);
+  --txt-color-hover: ;
+  --box-shadow: 0px 10px 15px 5px rgba(56, 41, 224, 0.25);
 }
 
 .btn-off {
-  background-color: transparent;
-  color: var(--c-blue-300);
-}
-
-.btn-off:hover {
-  color: var(--c-dark-blue);
-  transition: all 0.2s ease-in-out;
+  --padding-x: 0;
+  --padding-y: 12px;
+  --bg-color: ;
+  --bg-color-hover: ;
+  --txt-color: var(--c-blue-300);
+  --txt-color-hover: var(--c-dark-blue);
+  --box-shadow: ;
 }
 
 .attribution {
@@ -160,7 +170,7 @@ img {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 750px) {
   body {
     background: url(../images/pattern-background-desktop.svg),
       var(--c-pale-blue);
@@ -168,15 +178,23 @@ img {
     background-repeat: no-repeat;
     background-size: contain;
   }
+  .card {
+    max-width: 450px;
+  }
   .card-content {
     padding: 3rem 3rem 2rem;
   }
-  .card-content h1 {
+  .card-content .card-title {
     font-size: 1.75rem;
   }
   .card-content .card-description {
     font-size: 1.125rem;
   }
+
+  .card-plan {
+    padding: 1.4rem;
+  }
+
   .card-plan-preview {
     font-size: 17px;
   }
