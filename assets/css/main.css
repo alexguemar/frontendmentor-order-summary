@@ -1,6 +1,6 @@
 :root {
   --c-pale-blue: hsl(225, 100%, 94%);
-  --c-bright-blue: hsl(245, 75%, 52%);
+  --c-bright-blue: #3829e0;
   --c-blue-100: hsl(225, 100%, 98%);
   --c-blue-300: hsl(224, 23%, 55%);
   --c-blue-800: hsl(223, 47%, 23%);
@@ -75,12 +75,12 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: var(--c-very-pale-blue);
+  background-color: var(--c-blue-100);
   margin-bottom: 1.5rem;
   border-radius: 1.25rem;
 }
 
-.card-order:hover {
+.card-plan:hover {
   background-color: var(--c-pale-blue);
 }
 
@@ -100,7 +100,7 @@ img {
   color: var(--c-desaturated-blue);
 }
 
-.card-order-preview svg {
+.card-plan-preview svg {
   width: 3rem;
   height: 3rem;
 }
@@ -149,14 +149,19 @@ img {
 }
 
 .attribution {
+  position: absolute;
   bottom: 2rem;
   right: 2rem;
-  position: absolute;
   font-size: 11px;
-  text-align: center;
+  color: var(--f-color);
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--c-bright-blue);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 450px) {
@@ -169,7 +174,7 @@ img {
   .card-content .card-description {
     font-size: 1.125rem;
   }
-  .card-order-preview {
+  .card-plan-preview {
     font-size: 17px;
   }
   .card-change {
