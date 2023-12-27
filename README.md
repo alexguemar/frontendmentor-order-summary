@@ -2,7 +2,7 @@
 <h2>🎯 Frontend Mentor - Order summary card </h2>
 </div>
 
-This is a solution to the [Order summary card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U).
+This is a solution to the [Order summary card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj).
 
 ## Overview
 
@@ -19,7 +19,7 @@ Users should be able to:
 
 ### 🔗 Links
 
-- Solution URL - Github: [Add solution URL here](https://github.com/alexguemar/frontendmentor-nft-preview-card)
+- Solution URL - Github: [Add solution URL here](https://github.com/alexguemar/frontendmentor-order-summary)
 - Live Site URL - Vercel: [Add live site URL here](https://frontendmentor-nft-preview-card-six.vercel.app/)
 
 ## 🚀 My process

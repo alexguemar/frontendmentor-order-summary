@@ -80,10 +80,6 @@ img {
   border-radius: 1.25rem;
 }
 
-.card-plan:hover {
-  background-color: var(--c-pale-blue);
-}
-
 .card-plan-details {
   display: flex;
   align-items: center;
@@ -97,7 +93,7 @@ img {
 }
 
 .card-plan-details span {
-  color: var(--c-desaturated-blue);
+  color: var(--c-blue-300);
 }
 
 .card-plan-preview svg {
@@ -140,7 +136,7 @@ img {
 
 .btn-off {
   background-color: transparent;
-  color: var(--c-desaturated-blue);
+  color: var(--c-blue-300);
 }
 
 .btn-off:hover {
@@ -165,6 +161,13 @@ img {
 }
 
 @media screen and (min-width: 450px) {
+  body {
+    background: url(../images/pattern-background-desktop.svg),
+      var(--c-pale-blue);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   .card-content {
     padding: 3rem 3rem 2rem;
   }
